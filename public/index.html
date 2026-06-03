@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Itens</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Filmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+
+<header>
+  <div class="logo">CINE<span>DB</span></div>
+  <div class="search-wrap">
+    <input type="text" id="search-input" placeholder="Buscar filmes..." />
+    <button id="btn-search">Buscar</button>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <span class="filter-label">Filtrar por:</span>
+  <button class="filter-btn active" data-filter="popular">Populares</button>
+  <button class="filter-btn" data-filter="now_playing">Em Cartaz</button>
+  <button class="filter-btn" data-filter="top_rated">Mais Bem Avaliados</button>
+  <button class="filter-btn" data-filter="upcoming">Em Breve</button>
+</div>
+
+<main>
+  <h2 class="section-title" id="section-title">Filmes <span>Populares</span></h2>
+  <div id="loader"><div class="spinner"></div></div>
+  <p id="message"></p>
+  <div id="movie-list"></div>
+</main>
+
+<div id="modal-overlay">
+  <div id="modal">
+    <div class="modal-header" id="modal-header"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
